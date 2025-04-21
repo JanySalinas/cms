@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kundedetaljer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Kundedetaljer</h1>
+  </header>
+  
+  <section id="customer-info">
+    <h2 id="customer-name"></h2>
+    <p><strong>E-post:</strong> <span id="customer-email"></span></p>
+    <p><strong>Firma:</strong> <span id="customer-company"></span></p>
+  </section>
+  
+  <section id="activities">
+    <h3>Aktiviteter</h3>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Notat</th>
+          <th>Dato</th>
+        </tr>
+      </thead>
+      <tbody id="activity-table-body">
+        <!-- Aktiviteter blir lagt til her dynamisk -->
+      </tbody>
+    </table>
+  </section>
+  
+  <script src="customerDetails.js"></script>
+</body>
+</html>

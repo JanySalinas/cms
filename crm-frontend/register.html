@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrer Deg</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="register-container">
+    <h2>Registrer Deg</h2>
+    <form id="register-form">
+      <div>
+        <label for="name">Navn:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">E-post:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="password">Passord:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div>
+        <label for="confirmPassword">Bekreft Passord:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+      </div>
+      <button type="submit">Registrer</button>
+    </form>
+
+    <!-- Seksjon for de som allerede har konto -->
+    <div class="login-section" style="margin-top:15px; text-align:center;">
+      <p>Har du allerede konto?
+        <button type="button" id="go-login"
+                style="background:none;border:none;color:#337ab7;cursor:pointer;
+                       text-decoration:underline;font-size:0.9rem;">
+          Logg inn her
+        </button>
+      </p>
+    </div>
+    
+    <!-- Seksjon for å gå tilbake til forsiden -->
+    <div class="home-section" style="margin-top:10px; text-align:center;">
+      <button type="button" id="go-home"
+              style="background:none;border:none;color:#337ab7;cursor:pointer;
+                     text-decoration:underline;font-size:0.9rem;">
+        Tilbake til forsiden
+      </button>
+    </div>
+  </div>
+
+  <script src="register.js"></script>
+  <script>
+    document.getElementById('go-login').addEventListener('click', () => {
+      window.location.href = 'login.html';
+    });
+    document.getElementById('go-home').addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

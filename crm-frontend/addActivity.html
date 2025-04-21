@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legg til Aktivitet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Legg til Aktivitet</h1>
+  </header>
+  
+  <main>
+    <form id="activity-form">
+      <!-- Om du ønsker å knytte aktiviteten til en spesifikk kunde kan du evt. inkludere kunde-ID som skjult felt eller hente den fra URL -->
+      <div>
+        <label for="customerId">Kunde ID (valgfritt):</label>
+        <input type="text" id="customerId" name="customerId" placeholder="Skriv kunde-ID om nødvendig">
+      </div>
+      <div>
+        <label for="type">Type Aktivitet:</label>
+        <select id="type" name="type" required>
+          <option value="">--Velg aktivitet--</option>
+          <option value="call">Samtale</option>
+          <option value="meeting">Møte</option>
+          <option value="email">E-post</option>
+        </select>
+      </div>
+      <div>
+        <label for="note">Notat:</label>
+        <textarea id="note" name="note" required></textarea>
+      </div>
+      <div>
+        <label for="date">Dato:</label>
+        <input type="datetime-local" id="date" name="date" required>
+      </div>
+      <button type="submit">Legg til Aktivitet</button>
+    </form>
+  </main>
+  
+  <script src="addActivity.js"></script>
+</body>
+</html>

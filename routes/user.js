@@ -1,29 +1,20 @@
 const express = require('express');
-const router = express.Router();
+const router  = express.Router();
+const ctrl    = require('../controllers/user.controller');
 
-router.get('/', (req, res) => {
-    res.send('Get all users');
-});
+// GET    /api/user         → list all users
+router.get('/',    ctrl.getAllUsers);
 
-router.get('/:id', (req, res) => {
-    const userId = req.params.id;
-    res.send(`Get user with ID: ${userId}`);
-});
+// GET    /api/user/:id     → get one user
+router.get('/:id', ctrl.getUserById);
 
-router.post('/', (req, res) => {
-    const newUser = req.body;
-    res.send(`Create a new user: ${JSON.stringify(newUser)}`);
-});
+// POST   /api/user         → create a new user
+router.post('/',   ctrl.createUser);
 
-router.put('/:id', (req, res) => {
-    const userId = req.params.id;
-    const updatedUser = req.body;
-    res.send(`Update user with ID: ${userId} to ${JSON.stringify(updatedUser)}`);
-});
+// PUT    /api/user/:id     → update an existing user
+router.put('/:id', ctrl.updateUser);
 
-router.delete('/:id', (req, res) => {
-    const userId = req.params.id;
-    res.send(`Delete user with ID: ${userId}`);
-});
+// DELETE /api/user/:id     → remove a user
+router.delete('/:id', ctrl.deleteUser);
 
 module.exports = router;

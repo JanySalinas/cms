@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legg til / Rediger Kunde</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="form-title">Legg til Kunde</h1>
+  </header>
+  
+  <main>
+    <form id="customer-form">
+      <div>
+        <label for="name">Navn:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">E-post:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="company">Firma:</label>
+        <input type="text" id="company" name="company">
+      </div>
+      <button type="submit" id="submit-button">Lagre</button>
+    </form>
+  </main>
+  
+  <script src="addEditCustomer.js"></script>
+</body>
+</html>

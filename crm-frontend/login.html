@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Logg Inn</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-container">
+    <h2>Logg Inn</h2>
+    <form id="login-form">
+      <div>
+        <label for="email">E-post:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="password">Passord:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">Logg Inn</button>
+    </form>
+
+    <!-- Seksjon for registrering -->
+    <div class="register-section" style="margin-top:15px; text-align:center;">
+      <p>Har du ikke konto?
+        <button type="button" id="go-register"
+                style="background:none;border:none;color:#337ab7;cursor:pointer;
+                       text-decoration:underline;font-size:0.9rem;">
+          Registrer deg her
+        </button>
+      </p>
+    </div>
+
+    <!-- Seksjon for å gå tilbake til forsiden -->
+    <div class="home-section" style="margin-top:10px; text-align:center;">
+      <button type="button" id="go-home"
+              style="background:none;border:none;color:#337ab7;cursor:pointer;
+                     text-decoration:underline;font-size:0.9rem;">
+        Tilbake til forsiden
+      </button>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+  <script>
+    document.getElementById('go-register').addEventListener('click', () => {
+      window.location.href = 'register.html';
+    });
+    document.getElementById('go-home').addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - Kunder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Dashboard</h1>
+    <!-- Legg til en navbar med logout-knapp -->
+    <nav>
+      <button id="logout-btn">Logout</button>
+    </nav>
+  </header>
+  
+  <main>
+    <h2>Kundeliste</h2>
+    <table border="1" id="customer-table">
+      <thead>
+        <tr>
+          <th>Navn</th>
+          <th>E-post</th>
+          <th>Firma</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Kunder blir lagt til her dynamisk -->
+      </tbody>
+    </table>
+  </main>
+  
+  <script src="dashboard.js"></script>
+  <script src="logout.js"></script>
+</body>
+</html>
